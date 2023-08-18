@@ -20,6 +20,7 @@ const port = parseInt(process.env.DB_PORT) || 1433;
       synchronize: true,
       autoLoadModels: true,
       logging: true,
+     dialectOptions: { options: { encrypt: false } },
     }),
     DatabaseModule,
     NpsModule,

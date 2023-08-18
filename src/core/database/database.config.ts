@@ -12,6 +12,11 @@ export const databaseConfig: IDatabaseConfig = {
     port: process.env.DB_PORT,
     dialect: process.env.DB_DIALECT,
     timezone: process.env.TIMEZONE,
+   dialectOptions: {
+  options: {
+    encrypt: false
+  }
+}
   },
   test: {
     username: process.env.DB_USER,
@@ -21,6 +26,9 @@ export const databaseConfig: IDatabaseConfig = {
     port: process.env.DB_PORT,
     dialect: process.env.DB_DIALECT,
     timezone: process.env.TIMEZONE,
+    dialectOptions: {
+      encrypt: false
+  }
   },
   production: {
     username: process.env.DB_USER,
@@ -29,5 +37,8 @@ export const databaseConfig: IDatabaseConfig = {
     host: process.env.DB_HOST,
     dialect: process.env.DB_DIALECT,
     timezone: process.env.TIMEZONE,
+    dialectOptions: {
+      encrypt: false
+  }
   },
-};
+} as any;
